@@ -1,0 +1,143 @@
+.css3{
+    width:400px;
+    height:50px;
+    margin:50px auto;
+    margin-bottom:0px;
+    border:1px solid white;
+    box-shadow:0px 0px 20px red;
+    animation:left 0.5s linear;
+    border-radius:10px;
+}
+.p1{
+    height:100%;
+    line-height:50px;
+    text-align:center;
+    font-weight: bold;
+    font-size:30px;
+    font-family: "方正舒体";
+    color:white;
+    overflow: hidden;
+    width:0px;
+    margin-left:50px;
+    transition: all 2s linear 0s;
+}
+.css4{
+    width:400px;
+    height:400px;
+    display:none;
+    position: relative;
+    margin:0px auto;
+    border:1px solid white;
+    border-top:none;
+    box-shadow:0px 0px 20px green;
+    border-radius:5px;
+    background-image:url("../img/css511.jpg");
+}
+.css5{
+    width:300px;
+    height:300px;
+    position: absolute;
+    top:50px;
+    left:50px;
+    border:1px solid white;
+    box-shadow:0px 0px 20px blue;
+    animation:right 0.5s linear 1s;
+    border-radius:50%;
+    transform:translateX(2000px);
+}
+.css6{
+    transform:translateX(0px);
+    transition:all 1s;
+}
+@keyframes left{
+    0%{
+        transform:translateX(-1000px);
+    }
+    100%{
+        transform:translateX(0px);
+    }
+}
+
+
+/*立方体特效*/
+.li{
+    width:50px;
+    height:50px;
+    position: absolute;
+    top:125px;
+    left:-2000px;
+    display:none;
+    /*transform:translate(-50%,-50%);*/
+    /*
+    刻意让里面的子盒子保持3D效果，加给父盒子
+    preserve-3d:让盒子 让盒子位于3d空间里面
+    flat 让盒子被扁平化
+    */
+    transform-style:preserve-3d;
+    transform: rotateX(30deg) rotateY(-30deg);
+    /*添加动画时长
+       
+    */
+   animation: gun 10s linear infinite;
+} 
+.css7{
+    left:125px;
+    transition:all 1s;
+}
+.css8{
+    display:block;
+}
+.li div{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0px;
+    top:0px;
+    line-height:50px;
+    text-align:center;
+    font-size:30px;
+    font-weight: bold;
+    font-family:"Microsoft Yahei";
+}
+.left1{
+   background:rgba(0,255,0,0.3);
+    /*变换中心*/
+    transform-origin:left;
+    box-shadow:0px 0px 20px green;
+    transform:rotateY(90deg) translateX(-25px);
+
+}
+.right1{
+    background:rgba(0,255,0,0.3);
+    transform-origin:right;
+      box-shadow:0px 0px 20px green;
+    transform:rotateY(90deg) translateX(25px);
+}
+.before1{
+    background:rgba(0,255,0,0.3);
+      box-shadow:0px 0px 20px green;
+    transform:translateZ(25px);
+}
+.after1{
+   background:rgba(0,0,255,0.3);
+    box-shadow:0px 0px 20px blue;
+    transform:translateZ(-25px);
+}
+.up1{
+    background:rgba(0,0,255,0.3);
+      box-shadow:0px 0px 20px blue;
+    transform:rotateX(90deg) translateZ(25px);
+}
+.down1{
+    background:rgba(0,0,255,0.3);
+      box-shadow:0px 0px 20px blue;
+    transform:rotateX(-90deg) translateZ(25px);
+}
+@keyframes gun{
+    0%{
+      transform:rotateX(0deg) rotateY(0deg);
+    }
+    100%{
+      transform:rotateX(360deg) rotateY(360deg);
+    }
+}

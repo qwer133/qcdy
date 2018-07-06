@@ -1,0 +1,319 @@
+* {
+  outline: none;
+  list-style: none;
+}
+span {
+  font-family: "方正舒体";
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 255, 0.5);
+  box-shadow: 0px 0px 10px black;
+  border-radius: 5px;
+  display: block;
+  width: 300px;
+  margin: 10px;
+  margin-left: 30px;
+}
+img {
+  box-shadow: 0px 0px 5px rgba(255, 0, 0, 0.5);
+}
+img:hover {
+  box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+}
+#img1 {
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+#img1:hover {
+  box-shadow: -10px 10px 10px rgba(0, 0, 255, 0.5);
+}
+.yel {
+  background-color: rgba(250, 249, 222, 0.7);
+}
+.whi {
+  background-color: white;
+}
+.bla {
+  background-color: black;
+}
+.ppt {
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 200px;
+  top: 100px;
+  background-color: rgba(0, 255, 0, 0.1);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px green;
+}
+.ppt:hover {
+  box-shadow: 0px 0px 10px blue;
+}
+@media screen and (max-width: 1500px) {
+  .ppt {
+    right: 150px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .ppt {
+    right: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .ppt {
+    right: 30px;
+  }
+}
+.header .row {
+  padding-bottom: 30px;
+  border-bottom: 1px solid gray;
+}
+.header .row > div .left {
+  padding-top: 20px;
+  position: relative;
+  top: 0px;
+  left: 30px;
+}
+.header .row > div .left #img1 {
+  border-radius: 15px;
+  box-shadow: 0px 0px 50px #00ff00;
+}
+@media screen and (min-width: 800px) and (max-width: 1220px) {
+  .header .row > div .hcenter {
+    opacity: 0;
+  }
+}
+.header .row > div .hcenter {
+  display: none;
+  position: relative;
+  margin-top: 40px;
+  margin-left: 20px;
+  width: 350px;
+  height: 60px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px red;
+}
+.header .row > div .hcenter #qhcc {
+  position: absolute;
+  border-radius: 5px;
+  right: 100px;
+  top: 5px;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  width: 70px;
+  height: 20px;
+  box-shadow: 0px 0px 20px blue;
+  background-color: skyblue;
+}
+.header .row > div .hcenter #qhcc:hover {
+  text-decoration: none;
+  box-shadow: 0px 0px 20px red;
+}
+.header .row > div .hcenter .hcl,
+.header .row > div .hcenter .hcc,
+.header .row > div .hcenter .hcr {
+  width: 98px;
+  height: 100%;
+  float: right;
+  font-size: 15px;
+  font-weight: bold;
+}
+.header .row > div .hcenter .hcl p,
+.header .row > div .hcenter .hcc p,
+.header .row > div .hcenter .hcr p {
+  text-align: center;
+  line-height: 0px;
+  height: 50%;
+}
+.header .row > div .hcenter .hcl p.hcrs,
+.header .row > div .hcenter .hcc p.hcrs,
+.header .row > div .hcenter .hcr p.hcrs {
+  line-height: 30px;
+}
+.header .row > div .hcenter .hcl {
+  float: left;
+  width: 20px;
+}
+.header .row > div .hcenter .hcc {
+  float: left;
+  width: 220px;
+}
+.header .row > div .hcenter .hcc .style {
+  text-align: left;
+}
+.header .row > div .hcenter .hcc b {
+  font-size: 10px;
+}
+.header .row > div .right11 {
+  font-weight: bold;
+  padding-top: 20px;
+}
+.header .row > div .right11 #txt {
+  font-size: 20px;
+  font-family: "华文行楷";
+  width: 230px;
+  height: 50px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+.header .row > div .right11 #txt:active {
+  box-shadow: 0px 0px 5px rgba(0, 0, 255, 0.5);
+}
+.header .row > div .right11 #txt:focus {
+  box-shadow: 0px 0px 5px rgba(0, 0, 255, 0.5);
+}
+.header .row > div .right11 #btn1 {
+  font-size: 20px;
+  font-family: "华文行楷";
+  border-radius: 5px;
+  width: 53px;
+  height: 50px;
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+@media screen and (min-width: 750px) and (max-width: 1211px) {
+  .right {
+    position: relative;
+    left: -100px;
+    margin-left: -180px;
+  }
+}
+.contents {
+  margin-top: 20px;
+}
+.contents div:nth-child(1) {
+  border: none;
+}
+.contents div:nth-child(1) .left img {
+  margin-left: 30px;
+  width: 300px;
+  height: 350px;
+}
+.contents div:nth-child(1) .right {
+  padding-left: 30px;
+  margin-top: 20px;
+  width: 100%;
+}
+.contents div:nth-child(1) .right #dyxx {
+  border: 1px solid gray;
+  padding: 20px;
+  padding-bottom: 25px;
+}
+@media screen and (max-width: 1195px) and (min-width: 745px) {
+  .contents .right {
+    position: relative;
+    left: 240px;
+    top: -20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contents .star img {
+    margin-left: 20px;
+  }
+}
+.contents .star {
+  margin-top: 20px;
+  border-top: 1px solid gray;
+}
+.contents .star ul {
+  font-family: "方正舒体";
+  list-style: none;
+}
+.contents .star ul li {
+  float: left;
+  margin: 10px;
+}
+.contents .star ul li img {
+  width: 100px;
+  height: 125px;
+}
+.contents .star ul li p {
+  text-align: center;
+  font-size: 30px;
+}
+.plays {
+  margin-top: 20px;
+  border-top: 1px solid gray;
+}
+.plays .playSpan {
+  display: block;
+  margin: 20px 0px  0px 30px;
+}
+.plays #playxx a {
+  box-shadow: 0px 0px 10px skyblue;
+  border-radius: 10px;
+  display: block;
+  width: 300px;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 30px;
+  float: left;
+  background-color: aquamarine;
+  color: #999;
+  text-shadow: 0px 0px  3px blue;
+}
+.plays #playxx a:hover {
+  text-decoration: none;
+  box-shadow: 0px 0px 20px green;
+  text-shadow: 0px 0px  3px red;
+}
+.plays #playxx a img {
+  margin-right: 10px;
+}
+.movies {
+  margin-top: 20px;
+  border-top: 1px solid gray;
+}
+.movies .movieSpan {
+  margin: 20px 0px  0px 30px;
+}
+.movies ul {
+  font-family: "方正舒体";
+}
+.movies ul li {
+  float: left;
+  margin: 20px;
+  margin-left: 0px;
+  position: relative;
+}
+.movies ul li #getUp {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.movies ul li #getUp:hover {
+  box-shadow: 0px 0px 15px rgba(0, 100, 0, 0.6);
+}
+.movies ul li img {
+  width: 300px;
+  height: 350px;
+}
+.movies ul li p {
+  text-align: center;
+  font-size: 30px;
+}
+.footer .row {
+  display: none;
+  height: 200px;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  color: #ffffff;
+}
+.footer .row h2,
+.footer .row .footer_bottom {
+  margin: 10px 0px;
+  text-align: center;
+}

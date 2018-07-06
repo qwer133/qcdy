@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>qcdy</title>
+
+    <!-- Bootstrap -->
+    <link rel="shortcut icon" href="img/标题1.jpg" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/cssAnimate.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif] -->
+    <!-- class="bla" id="boy" -->
+  </head>
+  <body class="bla">
+    
+  
+    <div id="getDown" style="height:0px; width:0px;"></div>
+    <audio id="bgm">
+          <source src=""/>
+    </audio>
+    <button class="ppt">护眼开</button>
+    <div class="header">
+            <div class="container minWidth">
+	    
+                    <div class="row">
+                            <div class="col-md-4 col-sm-12">
+                            <div class="left"><img id="img1" src="img/logo1.jpg"></div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 hcenterbaba">
+                                <div class="hcenter">
+                                    <a href="实时天气.html" id="qhcc">切换城市</a>
+                                    <div class="hcl">
+                                            <p class="hcrs"></p>
+                                            <p class="hcrx"></p>
+                                    </div>
+                                    <div class="hcc">
+                                       
+                                    </div>
+                                    <div class="hcr">
+                                            <p class="hcrs"></p>
+                                            <p class="hcrx"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-2 col-sm-3"></div> -->
+                            <div class="col-md-4 col-sm-12">
+                                <div class="right11">
+                                        <input type="text" list="sex" placeholder="请输入电影名称" id="txt" value="夏洛特烦恼">
+                                        <datalist id="sex">
+                                                <option>让子弹飞</option>
+                                                <option>美人鱼</option>
+                                                <option>唐人街探案</option>
+                                                <option>泰囧</option>
+                                        </datalist>
+                                        <input type="button" value="搜索" id="btn1">
+                                </div>
+                            </div>
+                      </div>
+                        
+              </div>
+    </div>
+    <div class="contents">
+        
+   </div>
+   <div class="footer">
+        <div class="container">
+                <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                           <div class="footder">
+                               <h2 class="footer_top">感谢浏览本网站</h2>
+                               <div class="footer_bottom">
+                                   <b class="f_b_first">作者:吴XX  |</b>
+                                   <b class="f_b_send">邮箱:515117964@qq.com |</b>
+                                   <b class="f_b_third">电话:15172548530</b>
+                               </div>
+                           </div>
+                       </div>
+                </div>
+          </div>
+   </div>
+   
+
+   <!--c33动画-->
+    <div class="css3">
+        <p  class="p1">点击搜索按钮有惊喜哦</p>
+    </div>
+
+    <div class="css4">
+        
+        <div class="css5">
+                <div class="li">
+                        <div class="up1">6</div>
+                        <div class="down1">1</div>
+                        <div class="left1">2</div>
+                        <div class="right1">3</div>
+                        <div class="before1">4</div>
+                        <div class="after1">5</div>
+                </div>
+        </div>
+    </div>
+
+
+
+
+  </body>
+
+  <!--城市名称-->
+  <div id="city1" style="display: none"></div>
+</html>
+ <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+ <script src="js/jquery-3.3.1.min.js"></script>
+ <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+ <script src="js/bootstrap.min.js"></script>
+ <script src="js/template-native.js"></script>
+ <script type="text/template" id="template">
+
+    <div class="container">
+        <span>电影简介</span>
+        <div class="row">
+                <div class="col-md-4 col-sm-4">
+                <div class="left">
+                    <img src="<%=cover%>"> 
+                </div>
+                </div>
+                <div class="col-md-8 col-sm-8">
+                    <div class="right">
+                        <div id="dyxx">
+                            <p>电影名称: <%=title%></p>
+                            <p>电影类型: <%=tag%></p>
+                            <p>演员名称: <%=act%></p>
+                            <p>上映年份: <%=year%></p>
+                            <p>电影评分: <%=rating%></p>
+                            <p>电影简介: <%=desc%></p>
+                            </div>
+                    </div>
+                </div>
+          </div>       
+  </div>
+  <div class="container star">
+    <span>演员介绍</span>
+    <div class="row">
+            <div class="col-md-12 col-sm-12">
+                    <ul class="star1">
+                            <%for(var i=0;i<act_s.length;i++){%>
+                                <li><img src="<%=act_s[i].image%>"><p><%=act_s[i].name%></p></li>
+                            <%}%>
+                    </ul>
+            </div>
+           
+      </div>       
+  </div>
+
+  <div class="container plays">
+        <span class="playSpan">播放源</span>
+        <div class="row">
+                <div class="col-md-12 col-sm-12">
+                        <div id="playxx">
+                               <a href="<%=playlinks["qq"]%>"><img src="img/腾讯.jpg">QQ播放</a>
+                               <a href="<%=playlinks["qiyi"]%>"><img src="img/爱奇艺.jpg">爱奇艺播放</a>
+                               <a href="<%=playlinks["levp"]%>"><img src="img/乐视.jpg">乐视播放</a>
+                               <a href="<%=playlinks["youku"]%>"><img src="img/优酷.jpg">优酷播放</a>
+                               <a href="<%=playlinks["tudou"]%>"><img src="img/土豆.jpg">土豆播放</a>
+                               <a href="<%=playlinks["imgo"]%>"><img src="img/芒果.jpg">芒果播放</a>
+                        </div> 
+                </div>
+               
+          </div>       
+      </div>
+ <div class="container movies">
+        <span class="movieSpan">推荐电影</span>
+        <div class="row">
+                <div class="col-md-12 col-sm-12">
+                        <div id="moviexx">
+                                <ul class="movietuijian">
+                                        <%for(var i=0;i<video_rec.length;i++){%>
+                                            <li><a id="getUp" href="#getDown"></a><img class="imgs" src="<%=video_rec[i].cover%>"><p><%=video_rec[i].title%></p></li>
+                                        <%}%>
+                                </ul>
+                        </div> 
+                </div>
+               
+          </div>       
+      </div>
+</script>
+<script type="text/template" id="template1">
+    <p class="hcrs style">
+            <b><%=city%></b>
+            <b><%=forecast[0].type%></b>
+            <b>空气质量:<%=aqi%></b>
+        </p>
+        <p class="hcrx style">
+            <b>当前气温:<%=wendu%></b>
+            <b class="b4"><%=forecast[0].low%></b>
+            <b class="b5"><%=forecast[0].high%></b>
+    </p>
+</script>
+<script type="text/template" id="template2">
+        <p><%= address_detail.city%></p>
+</script>
+ <script src="js/myjs.js"></script>
